@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 14px;
+}
+
+:root{
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+    --White:#fff;
+}
+
+body{
+    background: linear-gradient(180deg, var(--Soft-violet),var(--Soft-blue));
+    background-repeat: no-repeat;
+}
+.container{
+    width: 335px;
+    margin: 90px auto 60px auto;
+    background-color: var(--White);
+    border-radius: 20px;
+    box-shadow: 0 50px 100px var(--Very-dark-desaturated-blue);
+    padding: 20px 20px 50px 20px;
+}
+
+
+.container-s1>img{
+    display: block;
+    width: 236px;
+}
+.box{
+    display:none !important;
+}
+.img-main{
+    margin: -130px auto 0;
+}
+.img-shadow{
+    margin: -200px auto 0px;
+}
+
+.title{
+    font-weight: 700;
+    font-size: 2.5em;
+    text-align: center;
+    padding: 30px 0 10px;
+}
+
+.details{
+    padding: 20px 0;
+}
+
+.details[open]>.summary{
+    font-weight: 700;
+}
+
+.summary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;  
+}
+
+.summary:hover{
+    color: var(--Soft-red); 
+    font-weight: 700;
+}
+
+.details>.summary .icon{
+    transition: 300ms;
+}
+.details[open]>.summary .icon{
+    transform: rotate(180deg);
+}
+
+.p{
+    padding-top: 15px;
+    color: var(--Dark-grayish-blue);
+}
+
+hr {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: var(--Light-grayish-blue);
+}
+
+@media (min-width:1044px) {
+    .container{
+        overflow: hidden;
+        width: 924px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .title{
+         text-align: left;
+    }
+    .container-s2 {
+        padding-right: 100px;
+    }
+
+    .container-s1 img{
+        display: block;
+        width: 474px;
+    }
+
+    .box{
+        position: absolute;
+        display: block !important;
+        width: 200px !important;
+        z-index: 1;
+        margin: 130px -115px;
+    }
+
+    .img-main{
+        position: relative;
+        margin: auto 0 auto -100px;
+    }
+    .img-shadow{
+        margin: -627px -425px;
+        width: 800px !important;
+    }
+
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin: 20px 0;
+}
+
+.attribution a { 
+    color: hsl(229, 21%, 10%); 
+}
